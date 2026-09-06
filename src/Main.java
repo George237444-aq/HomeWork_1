@@ -27,7 +27,7 @@ public class Main {
         var friend = 19;
         System.out.println(friend);
 
-        friend = friend * 2;
+        friend = friend + 2;
         System.out.println(friend);
 
         friend = friend / 7;
@@ -44,16 +44,16 @@ public class Main {
         System.out.println(frog);
 
         //задание 6
-        var b1 = 78.2;
-        var b2 = 82.7;
-        var massa = b1 + b2;
-        var raznica = b2 - b1;
-        System.out.println("общий вес - "  + massa);
-        System.out.println("разница в весе - " + raznica);
+        var firstBoxerWeight = 78.2;
+        var secondBoxerWeight = 82.7;
+        var totalWeight = firstBoxerWeight + secondBoxerWeight;
+        var weightDifference = secondBoxerWeight - firstBoxerWeight;
+        System.out.println("общий вес - "  + totalWeight);
+        System.out.println("разница в весе - " + weightDifference);
 
         // задание 7
-        var ost = b2 % b1;
-        System.out.println("остаток - " + ost);
+        var remainder = secondBoxerWeight % firstBoxerWeight;
+        System.out.println("остаток - " + remainder);
 
         //final
         var hourAll = 640;
@@ -81,12 +81,12 @@ public class Main {
 
         //задание 2
 
-        float one = 27.12f;
+        double one = 27.12;
         long two = 987678965549L;
         float three = 2.786f;
         short four = 569;
         short five = -159;
-        short six = 27897;
+        int six = 27897;
         byte seven = 67;
 
         //задание 3;
@@ -102,7 +102,7 @@ public class Main {
 // задание 4
 
 
-     byte productivityPerMinute = 9;
+     byte productivityPerMinute = 8;
      int productivity2 = productivityPerMinute * 20;
      int productivity3 = productivityPerMinute * 1440;
      int productivity4 = productivity3 * 3;
@@ -135,7 +135,9 @@ public class Main {
      short grammAll = 7 * 1000;
      int diet1 = grammAll / 250;
      int diet2 = grammAll / 500;
-     System.out.println("диета 1 занимает " + diet1 + " дней, а вторая всего лишь " + diet2 + " дней");
+     int averageValue = (diet1 + diet2) / 2;
+     System.out.println("диета 1 занимает " + diet1 + " дней, а вторая всего лишь " + diet2 + " дней, среднее значение " + averageValue);
+
 
     // задание 8
 
@@ -147,7 +149,7 @@ public class Main {
 
      int paycheckDenisBefore = 83690;
      int procent2 = paycheckDenisBefore / 100 * 10;
-     int paycheckDenisAfter = paycheckMaryaBefore + procent2;
+     int paycheckDenisAfter = paycheckDenisBefore + procent2;
      int difference2 = procent2 * 12;
      System.out.println("зарплата Дениса после повышения: " + paycheckDenisAfter + " Годовой доход вырос на" + difference2 + "рублей");
 
