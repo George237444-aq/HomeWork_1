@@ -162,6 +162,141 @@ public class Main {
 
 
 
+    //задание 1
+    int age = 63;
+    if(age >= 18) {
+     System.out.println("если возраст равен " + age + " то он совершеннолетний");
+
+    }
+     else{
+     System.out.println("если возраст равен " + age + "он не достиг совершеннолетия");
+     }
+
+
+     //задание 2
+     int temperature = 7;
+     if (temperature >= 5){
+      System.out.println("на улице " + temperature + " градусов. Можно не надевать шапку");
+     }
+
+
+     else {
+      System.out.println("на улице " + temperature + " градусов. Нужно надеть шапку");
+     }
+
+
+
+     ///задание 3
+
+     int speed = 70;
+     if (speed <= 60){
+      System.out.println("ваша скорость " + speed + "км/ч - вы хороший водитель");
+     }
+
+     else {
+      System.out.println("ваша скорость " + speed + "км/ч - вам штраф");
+     }
+
+
+     //задание 4
+
+     int ageApplicant = 15;
+
+     boolean placeOfReceipt = ageApplicant >= 2 && ageApplicant <= 6;
+     if (placeOfReceipt){
+      System.out.println("ваш возраст " + ageApplicant + " вам нужно в детсад");
+     }
+     boolean placeOfReceipt1 = ageApplicant >= 7 && ageApplicant <= 17;
+     if (placeOfReceipt1){
+      System.out.println("ваш возраст " + ageApplicant + " вам нужно в школу");
+     }
+     boolean placeOfReceipt2 = ageApplicant >= 18 && ageApplicant <= 24;
+     if (placeOfReceipt2){
+      System.out.println("ваш возраст " + ageApplicant + " вам нужно в универ");
+     }
+     boolean placeOfReceipt3 = ageApplicant >= 24;
+     if (placeOfReceipt3){
+      System.out.println("ваш возраст " + ageApplicant + " вам нужно на работу");
+     }
+
+
+
+    //задача 5
+
+     byte child = 7;
+     boolean permission = child < 5;
+     if (permission){
+      System.out.println("ребенку " + child + " лет, ему нельзя кататься");
+     }
+
+     boolean permission1 = child > 5 && child < 14;
+     if (permission1){
+      System.out.println("ребенку " + child + " лет, ему можно кататься, но только со взрослым");
+     }
+
+     boolean permission2 = child > 14;
+     if (permission2){
+      System.out.println("ребенку " + child + " лет, ему можно кататься самостоятельно");
+     }
+
+
+    //задание 6
+     int passengers = 76;
+     if (passengers < 102){
+      System.out.println("в вагоне есть места");
+
+
+      if (passengers < 60){
+       System.out.println("пассажиры могут сидеть");
+      }
+
+      else{
+       System.out.println("но пассажиры вынуждены стоять");
+
+      }
+
+
+
+     }
+
+     else {
+      System.out.println("в вагоне мест нет");
+     }
+
+
+    //final
+
+     int Wone = 1;
+     int Wtwo = 2;
+     int Wthree = 3;
+
+     boolean aLargerNumber = Wone >= 3;
+     if (aLargerNumber){
+      System.out.println("число " + Wone + " самое большое");
+     }
+
+     else {
+      System.out.println("число " + Wone + " не самое большое");
+     }
+
+     boolean aLargerNumber1 = Wtwo >= 3;
+     if (aLargerNumber1){
+      System.out.println("число " + Wtwo + " самое большое");
+     }
+
+     else {
+      System.out.println("число " + Wtwo + " не самое большое");
+     }
+
+
+     boolean aLargerNumber2 = Wthree >= 3;
+     if (aLargerNumber2){
+      System.out.println("число " + Wthree + " самое большое");
+     }
+
+     else {
+      System.out.println("число " + Wthree + " не самое большое");
+     }
 
 
 
@@ -174,5 +309,6 @@ public class Main {
 
 
 
-   }
+
+    }
 }
