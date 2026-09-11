@@ -307,7 +307,7 @@ public class Main {
 
 
         if (Wthree >= 3 && Wthree > 2 && Wthree > 1) {
-            System.out.println("число " + Wthree + " самое большое");
+            System.out.println("число " + Wthree + " самое большое.");
 
         } else {
             System.out.println("число " + Wthree + " не самое большое");
