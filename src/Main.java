@@ -389,7 +389,7 @@ public class Main {
         break;
 
           default:
-           System.out.println("такого месяца не существует");
+           System.out.println("такого месяца не существует.");
 
 
 
