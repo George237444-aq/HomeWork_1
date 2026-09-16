@@ -230,28 +230,29 @@ public class Main {
      byte child = 7;
      if (child < 5) {
       System.out.println("ребенку " + child + " лет, ему нельзя кататься");
-     } else{
-      System.out.println("Кататься можно");
-     }
+     } else if (child > 5 && child <= 14)
+      {
+        System.out.println("ребенку " + child + " лет, ему можно кататься, но только со взрослым");
+     } else if (child > 14) {
+       System.out.println("ребенку " + child + " лет, ему можно кататься самостоятельно");
+      }
 
-     if (child > 5 && child < 14) {
-      System.out.println("ребенку " + child + " лет, ему можно кататься, но только со взрослым");
-     }
 
 
-     if (child > 14) {
-      System.out.println("ребенку " + child + " лет, ему можно кататься самостоятельно");
-     }
+
+
+
+
 
 
 
      //задание 6
      int passengers = 76;
-     if (passengers < 102) {
-      System.out.println("в вагоне есть места");
-
-      int seatingPlaces = 76 - 60;
-      System.out.println("60 пассажиров может сидеать, остальные " + seatingPlaces + " будут стоять");
+     if (passengers < 60) {
+      System.out.println("в вагоне есть сидячие места");
+     } else if (passengers > 60 && passengers < 101) {
+      int seatingPlaces = passengers - 60;
+      System.out.println("Места есть, 60 пассажиров может сидеать, остальные " + seatingPlaces + " будут стоять");
      }
       else {
           System.out.println("в вагоне нет мест");
@@ -261,11 +262,11 @@ public class Main {
      //final
 
 
-     int wOne = 1;
-     int wTwo = 2;
+     int wOne = 5;
+     int wTwo = 5;
      int wThree = 3;
 
-     if (wOne > wTwo && wOne > wThree) {
+     if (wOne >= wTwo && wOne >= wThree) {
       System.out.println("число " + wOne + " самое большое");
 
      } else {
@@ -273,7 +274,7 @@ public class Main {
      }
 
 
-     if (wTwo > wOne && wTwo > wThree) {
+     if (wTwo >= wOne && wTwo >= wThree) {
       System.out.println("число " + wTwo + " самое большое");
 
      } else {
@@ -281,7 +282,7 @@ public class Main {
      }
 
 
-     if (wThree > wOne && wThree > wTwo) {
+     if (wThree >= wOne && wThree >= wTwo) {
       System.out.println("число " + wThree + " самое большое.");
 
      } else {
@@ -292,9 +293,9 @@ public class Main {
 
      //задание 1
 
-     int clientOC = 0;
+     int clientOS = 0;
 
-     if (clientOC == 0){
+     if (clientOS == 0){
       System.out.println("чтобы скачать приложение на IOS, перейдите по ссылке: ");
      }
 
@@ -305,11 +306,11 @@ public class Main {
      //задание 2
 
      int clientDeviceYear = 2015;
-     if (clientOC == 0 && clientDeviceYear < 2015){
+     if (clientOS == 0 && clientDeviceYear < 2015){
       System.out.println("чтобы скачать облегченное приложение на IOS, перейдите по ссылке: ");
-     } else if (clientOC == 0 && clientDeviceYear >= 2015){
+     } else if (clientOS == 0 && clientDeviceYear >= 2015){
       System.out.println("чтобы скачать приложение на IOS, перейдите по ссылке: ");
-     } else if (clientOC != 0 && clientDeviceYear < 2015) {
+     } else if (clientOS != 0 && clientDeviceYear < 2015) {
       System.out.println("чтобы скачать облегченное приложение на Android перейдите по ссылке");
      } else {
       System.out.println("чтобы скачать приложение на Android перейдите по ссылке");
