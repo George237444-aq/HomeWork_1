@@ -216,7 +216,7 @@ public class Main {
       System.out.println("вам не нужно в универ");
      }
 
-     if (ageApplicant >= 24) {
+     if (ageApplicant > 24) {
       System.out.println("ваш возраст " + ageApplicant + " вам нужно на работу");
      }
 
@@ -230,7 +230,7 @@ public class Main {
      byte child = 7;
      if (child < 5) {
       System.out.println("ребенку " + child + " лет, ему нельзя кататься");
-     } else if (child > 5 && child <= 14)
+     } else if (child >= 5 && child <= 14)
       {
         System.out.println("ребенку " + child + " лет, ему можно кататься, но только со взрослым");
      } else if (child > 14) {
@@ -250,7 +250,7 @@ public class Main {
      int passengers = 76;
      if (passengers < 60) {
       System.out.println("в вагоне есть сидячие места");
-     } else if (passengers > 60 && passengers < 101) {
+     } else if (passengers >= 60 && passengers <= 101) {
       int seatingPlaces = passengers - 60;
       System.out.println("Места есть, 60 пассажиров может сидеать, остальные " + seatingPlaces + " будут стоять");
      }
@@ -264,29 +264,19 @@ public class Main {
 
      int wOne = 5;
      int wTwo = 5;
-     int wThree = 3;
+     int wThree = 5;
 
-     if (wOne >= wTwo && wOne >= wThree) {
+     if (wOne > wTwo && wOne > wThree) {
       System.out.println("число " + wOne + " самое большое");
 
-     } else {
-      System.out.println("число " + wOne + " не самое большое");
-     }
-
-
-     if (wTwo >= wOne && wTwo >= wThree) {
+     } else if (wTwo > wOne && wTwo > wThree) {
       System.out.println("число " + wTwo + " самое большое");
 
-     } else {
-      System.out.println("число " + wTwo + " не самое большое");
-     }
-
-
-     if (wThree >= wOne && wThree >= wTwo) {
+     } else if (wThree > wOne && wThree > wTwo) {
       System.out.println("число " + wThree + " самое большое.");
 
      } else {
-      System.out.println("число " + wThree + " не самое большое");
+      System.out.println("все числа равны");
      }
 
 
@@ -411,17 +401,19 @@ public class Main {
 
 
      //задача 3
+
+
      for (int i = 0; i <= 17; i = i +2){
       System.out.println(i);
      }
 
 
+
      //задача 4
 
-     for (int i = -10; i <= 10; i++ ){
+     for (int i = 10; i >= -10; i-- ){
       System.out.println(i);
      }
-
 
      //задача 5
      for (int i = 1904; i <= 2096; i = i + 4 ){
