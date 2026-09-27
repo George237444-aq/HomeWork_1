@@ -589,8 +589,11 @@ public class Main {
         // задание 2
 
         System.out.println(Arrays.toString(arr1));
+        System.out.println("");
         System.out.println(Arrays.toString(arr2));
+        System.out.println("");
         System.out.println(Arrays.toString(arr3));
+
 
         //задание 3
         for (int l = arr1.length - 1; l >= 0; l--) {
@@ -622,8 +625,7 @@ public class Main {
 
 
         for (int i = 0; i <= arr1.length - 1; i++){
-              i = arr1.length + 1;
-            System.out.println(i);
+            System.out.print(arr1[i] + 1 + " ");
 
         }
     }
