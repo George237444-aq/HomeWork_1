@@ -589,9 +589,7 @@ public class Main {
         // задание 2
 
         System.out.println(Arrays.toString(arr1));
-        System.out.println("");
         System.out.println(Arrays.toString(arr2));
-        System.out.println("");
         System.out.println(Arrays.toString(arr3));
 
 
@@ -624,9 +622,150 @@ public class Main {
         //final
 
 
-        for (int i = 0; i <= arr1.length - 1; i++){
-            System.out.print(arr1[i] + 1 + " ");
+        int[] arr4 = {1, 2, 3};
+        for (int i = 0; i < arr4.length; i++) {
+            if (arr4[i] % 2 != 0) {
+                arr4[i] += 1;
+
+            }
+        }
+            System.out.println(Arrays.toString(arr4));
+
+
+        //задание 1
+
+        int[] inputArray0 = {10, 254, 43, 643, 4};
+        int sum = 0;
+        float medium = 0f;
+
+        for (int element : inputArray0) {
+            sum = sum + element;
+            medium = (float) sum / (element + 1);
+        }
+        System.out.println("выплаты за все время - " + Arrays.toString(inputArray0));
+        System.out.println("общая сумма - " + sum);
+
+
+        int [] inputArray1 = {10, 254, 43, 643, 4};
+        int outputArray1 = -1;
+        for (int i = 0; i < inputArray1.length; i++){
+            if (inputArray1[i] > outputArray1){
+                outputArray1 = inputArray1[i];
+            }
+        }
+
+        System.out.println("Большее число - " + outputArray1);
+
+
+        int [] inputArray1_1 = {10, 254, 43, 643, 4};
+        int outputArray1_1 = 1000;
+        for (int i = 0; i < inputArray1.length; i++){
+            if (inputArray1_1[i] < outputArray1_1){
+                outputArray1_1 = inputArray1_1[i];
+            }
+        }
+        System.out.println("меньшее число - " + outputArray1_1);
+        System.out.println("среднее число - " + medium);
+
+
+
+
+        // задание 2
+        int[] inputArray2 = {56000, 43000, 30000, 20000, 45000};
+        double[] outputArray2 = new double[inputArray2.length];
+        for (int i = 0; i < inputArray2.length; i++){
+            outputArray2[i] = inputArray2[i] * 0.13;
+            outputArray2[i] = inputArray2[i] -  outputArray2[i];
 
         }
+        System.out.println("зарплаты сотрудникам: " + Arrays.toString(inputArray2));
+        System.out.println("зарплаты после вычета налога: " + Arrays.toString(outputArray2));
+
+        //задание 3
+        int[] inputArray3 = {4200, 3600, 5100, 8330, 2000};
+        for (int j : inputArray3) {
+            boolean outputArray3;
+            outputArray3 = j > 5000;
+            if (outputArray3) {
+                System.out.println("выполнили показатели " + j);
+
+            }
+
+        }
+
+            for (int y : inputArray3) {
+                boolean outputArray3_1;
+                outputArray3_1 = y < 5000;
+                if (outputArray3_1){
+                    System.out.println("не выполнили показатели " + y);
+
+                }
+
+    }
+
+
+
+            // задание 4
+     int[] inputArray4 = {470000, -245000, 110000, -55322, 60000};
+            for (int i : inputArray4) {
+                boolean outputArray4;
+                outputArray4 = i > 0;
+                if (outputArray4) {
+                    System.out.println("просрочек нет");
+                } else {
+                    System.out.println("есть просрочка");
+                    break;
+                }
+
+            }
+        //задание 5
+        int[] inputArray5 = {0, 50000, 56000, 89000, 66000};
+            for (int i : inputArray5)   {
+                boolean outputArray5;
+                outputArray5 = i > 1;
+                if (outputArray5){
+                    System.out.println("месяц рентабелен");
+                } else {
+                    System.out.println("месяц не рентабелен");
+                }
+            }
+
+
+        //Задание 1
+        String firstName = "Ivan";
+        String middleName = "Ivanovich";
+        String lastName = "Ivanov";
+        String fullName = lastName + " " + firstName + " " + middleName;
+        System.out.println("Ф. И. О. сотрудника — " + fullName);
+
+        //задание 2
+        String reportFullName = fullName.toUpperCase();
+        System.out.println("Данные Ф. И. О. сотрудника для заполнения отчета — " + reportFullName);
+
+         //задание 3
+        fullName = "Иванов Семён Семёнович";
+        fullName = fullName.replace('ё', 'е');
+        System.out.println("Данные Ф. И. О. сотрудника — " + fullName);
+
+
+
+
+
+
+
+
+
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
