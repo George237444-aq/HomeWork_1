@@ -1,9 +1,60 @@
+import java.awt.image.AbstractMultiResolutionImage;
 import java.util.Arrays;
 
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+
+
+    public static void chekYear(int year){
+        if (year % 400 == 0) {
+            System.out.println(year + " Год является високосным");
+        } else if (year % 100 == 0) {
+            System.out.println(year + " Год не является високосным");
+        } else if (year % 4 == 0) {
+            System.out.println(year + " Год является високосным");
+        } else {
+            System.out.println(year + " Год не является високосным");
+        }
+    }
+
+
+    public static void chekOS ( int clientDeviceYear, int clientOS){
+        if (clientOS > 1){
+            System.out.println("ERROR");
+        } else {
+            if (clientOS == 0 && clientDeviceYear < 2015) {
+                System.out.println("чтобы скачать облегченное приложение на IOS, перейдите по ссылке: ");
+            } else if (clientOS == 0 && clientDeviceYear >= 2015) {
+                System.out.println("чтобы скачать приложение на IOS, перейдите по ссылке: ");
+            } else if (clientOS == 1 && clientDeviceYear < 2015) {
+                System.out.println("чтобы скачать облегченное приложение на Android перейдите по ссылке");
+            } else {
+                System.out.println("чтобы скачать приложение на Android перейдите по ссылке");
+            }
+
+        }
+
+    }
+
+    public static void chekBank(int deliveryDistance){
+        int deliveryTime = 1;
+        if (deliveryDistance <= 20) {
+            System.out.println("потребуется " + deliveryTime + " день");
+        } else if (deliveryDistance > 20 && deliveryDistance < 60) {
+            deliveryTime = deliveryTime + 1;
+            System.out.println("потребуется " + deliveryTime + " дня");
+        } else if (deliveryDistance > 60 && deliveryDistance < 100) {
+            deliveryTime = deliveryTime + 1;
+            System.out.println("потребуется " + deliveryTime + " дня");
+        } else {
+            System.out.println("сюда не доставляем");
+        }
+
+    }
+
+
     public static void main(String[] args) {
         // задание 1
         var dog = 8.0;
@@ -279,7 +330,7 @@ public class Main {
         }
 
         //задание 2
-
+/*
         int clientDeviceYear = 2015;
         if (clientOS == 0 && clientDeviceYear < 2015) {
             System.out.println("чтобы скачать облегченное приложение на IOS, перейдите по ссылке: ");
@@ -290,7 +341,7 @@ public class Main {
         } else {
             System.out.println("чтобы скачать приложение на Android перейдите по ссылке");
         }
-
+*/
 
         // задание 3
         int year = 2001;
@@ -748,17 +799,13 @@ public class Main {
         System.out.println("Данные Ф. И. О. сотрудника — " + fullName);
 
 
-
-
-
-
-
-
+        chekYear(1323);
+        chekOS(2019, 1);
+        chekBank(57);
 
 
     }
 }
-
 
 
 
