@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class Main {
 
 
-    public static void chekYear(int year){
+    public static void checkYear(int year){
         if (year % 400 == 0) {
             System.out.println(year + " Год является високосным");
         } else if (year % 100 == 0) {
@@ -20,7 +20,7 @@ public class Main {
     }
 
 
-    public static void chekOS ( int clientDeviceYear, int clientOS){
+    public static void checkOS ( int clientDeviceYear, int clientOS){
         if (clientOS > 1){
             System.out.println("ERROR");
         } else {
@@ -38,14 +38,14 @@ public class Main {
 
     }
 
-    public static void chekBank(int deliveryDistance){
+    public static void checkBank(int deliveryDistance){
         int deliveryTime = 1;
         if (deliveryDistance <= 20) {
             System.out.println("потребуется " + deliveryTime + " день");
-        } else if (deliveryDistance > 20 && deliveryDistance < 60) {
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
             deliveryTime = deliveryTime + 1;
             System.out.println("потребуется " + deliveryTime + " дня");
-        } else if (deliveryDistance > 60 && deliveryDistance < 100) {
+        } else if (deliveryDistance >= 60 && deliveryDistance <= 100) {
             deliveryTime = deliveryTime + 1;
             System.out.println("потребуется " + deliveryTime + " дня");
         } else {
@@ -344,6 +344,7 @@ public class Main {
 */
 
         // задание 3
+        /*
         int year = 2001;
         if (year % 400 == 0) {
             System.out.println(year + " Год является високосным");
@@ -354,7 +355,7 @@ public class Main {
         } else {
             System.out.println(year + " Год не является високосным");
         }
-
+*/
         //задание 4
 
         int deliveryDistance = 95;
@@ -799,9 +800,9 @@ public class Main {
         System.out.println("Данные Ф. И. О. сотрудника — " + fullName);
 
 
-        chekYear(1323);
-        chekOS(2019, 1);
-        chekBank(57);
+        checkYear(1323);
+        checkOS(2019, 0);
+        checkBank(60);
 
 
     }
