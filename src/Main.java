@@ -6,8 +6,7 @@ import java.util.Arrays;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
-
-    public static void checkYear(int year){
+    public static void checkYear(int year) {
         if (year % 400 == 0) {
             System.out.println(year + " Год является високосным");
         } else if (year % 100 == 0) {
@@ -19,16 +18,15 @@ public class Main {
         }
     }
 
-
-    public static void checkOS ( int clientDeviceYear, int clientOS){
-        if (clientOS > 1){
+    public static void checkOS(int clientYear, int clientOS) {
+        if (clientOS > 1) {
             System.out.println("ERROR");
         } else {
-            if (clientOS == 0 && clientDeviceYear < 2015) {
+            if (clientOS == 0 && clientYear < 2015) {
                 System.out.println("чтобы скачать облегченное приложение на IOS, перейдите по ссылке: ");
-            } else if (clientOS == 0 && clientDeviceYear >= 2015) {
+            } else if (clientOS == 0 && clientYear > 2015) {
                 System.out.println("чтобы скачать приложение на IOS, перейдите по ссылке: ");
-            } else if (clientOS == 1 && clientDeviceYear < 2015) {
+            } else if (clientOS == 1 && clientYear < 2015) {
                 System.out.println("чтобы скачать облегченное приложение на Android перейдите по ссылке");
             } else {
                 System.out.println("чтобы скачать приложение на Android перейдите по ссылке");
@@ -38,15 +36,15 @@ public class Main {
 
     }
 
-    public static void checkBank(int deliveryDistance){
+    public static void checkBank(int deliveryDistance) {
         int deliveryTime = 1;
-        if (deliveryDistance <= 20) {
+        if (deliveryDistance < 21) {
             System.out.println("потребуется " + deliveryTime + " день");
-        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+        } else if (deliveryDistance > 20 && deliveryDistance < 61) {
             deliveryTime = deliveryTime + 1;
             System.out.println("потребуется " + deliveryTime + " дня");
-        } else if (deliveryDistance >= 60 && deliveryDistance <= 100) {
-            deliveryTime = deliveryTime + 1;
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            deliveryTime = deliveryTime + 2;
             System.out.println("потребуется " + deliveryTime + " дня");
         } else {
             System.out.println("сюда не доставляем");
@@ -329,33 +327,6 @@ public class Main {
             System.out.println("чтобы скачать приложение на Android перейдите по ссылке");
         }
 
-        //задание 2
-/*
-        int clientDeviceYear = 2015;
-        if (clientOS == 0 && clientDeviceYear < 2015) {
-            System.out.println("чтобы скачать облегченное приложение на IOS, перейдите по ссылке: ");
-        } else if (clientOS == 0 && clientDeviceYear >= 2015) {
-            System.out.println("чтобы скачать приложение на IOS, перейдите по ссылке: ");
-        } else if (clientOS != 0 && clientDeviceYear < 2015) {
-            System.out.println("чтобы скачать облегченное приложение на Android перейдите по ссылке");
-        } else {
-            System.out.println("чтобы скачать приложение на Android перейдите по ссылке");
-        }
-*/
-
-        // задание 3
-        /*
-        int year = 2001;
-        if (year % 400 == 0) {
-            System.out.println(year + " Год является високосным");
-        } else if (year % 100 == 0) {
-            System.out.println(year + " Год не является високосным");
-        } else if (year % 4 == 0) {
-            System.out.println(year + " Год является високосным");
-        } else {
-            System.out.println(year + " Год не является високосным");
-        }
-*/
         //задание 4
 
         int deliveryDistance = 95;
@@ -508,75 +479,73 @@ public class Main {
         do {
             distance = distance + 500;
             remainingDistance = remainingDistance - 500;
-            if (remainingDistance <= 0 ){
-             break;
+            if (remainingDistance <= 0) {
+                break;
             }
-         System.out.println("держитесь! Осталось " + remainingDistance + " метров");
+            System.out.println("держитесь! Осталось " + remainingDistance + " метров");
         } while (distance < 42195);
 
 
         //задание 2 версия 2
 
-     System.out.println("вариант 2");
+        System.out.println("вариант 2");
 
 
-     int distanceRemaining = 42195;
-     int distanceTwo = 0;
-     for (; distanceTwo <= 42195; distanceTwo = distanceTwo + 500){
-      distanceRemaining =  distanceRemaining - 500;
-      if (distanceRemaining <= 0 ){
-       break;
-      }
-      System.out.println("держитесь! Осталось " + distanceRemaining + " метров");
-     }
+        int distanceRemaining = 42195;
+        int distanceTwo = 0;
+        for (; distanceTwo <= 42195; distanceTwo = distanceTwo + 500) {
+            distanceRemaining = distanceRemaining - 500;
+            if (distanceRemaining <= 0) {
+                break;
+            }
+            System.out.println("держитесь! Осталось " + distanceRemaining + " метров");
+        }
 
 
-     //задание 3 v 1
+        //задание 3 v 1
 
-     int budget = 1000;
-     int day;
-
-
+        int budget = 1000;
+        int day;
 
 
-     while (budget > 0) {
-         budget = budget - 100;
-         day = budget / 100;
-         if (day % 5 == 0) {
-             continue;
+        while (budget > 0) {
+            budget = budget - 100;
+            day = budget / 100;
+            if (day % 5 == 0) {
+                continue;
 
-         }
-         day = day + 2;
-         System.out.println("колличество оплаченых дней = " + day);
+            }
+            day = day + 2;
+            System.out.println("колличество оплаченых дней = " + day);
 
-     }
+        }
 
-     System.out.println("часть 2");
-     //задание 3.2
-       int dayLost = 0;
-       for (int i = 1000; i >= 0; i = i - 100){
+        System.out.println("часть 2");
+        //задание 3.2
+        int dayLost = 0;
+        for (int i = 1000; i >= 0; i = i - 100) {
             dayLost = i / 100;
-            if (dayLost % 5 == 0){
+            if (dayLost % 5 == 0) {
 
                 continue;
             }
-           dayLost = dayLost + 2;
+            dayLost = dayLost + 2;
 
 
             System.out.println("колличество оплаченых дней = " + dayLost);
-       }
+        }
 
 
-       // задание 4
+        // задание 4
         int salaryTwo = 15000;
-       int totalTwo = 0;
-       int month = 0;
-       int procent;
-        while (true){
+        int totalTwo = 0;
+        int month = 0;
+        int procent;
+        while (true) {
             month++;
             totalTwo = totalTwo + salaryTwo;
 
-            if (month % 6 == 0){
+            if (month % 6 == 0) {
                 procent = totalTwo / 100 * 7;
                 totalTwo = totalTwo + procent;
                 continue;
@@ -584,13 +553,12 @@ public class Main {
             }
             System.out.println("за месяц " + month + " вы накопили " + totalTwo);
 
-            if (totalTwo >= 12000000){
+            if (totalTwo >= 12000000) {
                 break;
             }
 
 
         }
-
 
 
         //задание 5
@@ -599,20 +567,18 @@ public class Main {
         int overheats = 0;
 
 
-
-        while (charge <= 100)
-        {
+        while (charge <= 100) {
             minute++;
             charge = charge + 2;
 
-            if (minute % 10 == 0){
+            if (minute % 10 == 0) {
                 overheats++;
                 minute = minute + 2;
                 System.out.println("Устройство перегрелось - проиостановили зарядку на 2 минуты");
 
             }
 
-            if (overheats == 3){
+            if (overheats == 3) {
                 System.out.println("ВНИМАНИЕ ПЕРЕГРЕB");
                 break;
             }
@@ -621,21 +587,18 @@ public class Main {
         System.out.println("на полную зарядку ушло " + minute + " минут");
 
 
-
-
         // задача 1
 
-        int [] arr1 = new int [3];
+        int[] arr1 = new int[3];
         arr1[0] = 1;
         arr1[1] = 2;
         arr1[2] = 3;
 
 
+        float[] arr2 = {1.57f, 7.654f, 9.986f};
 
-        float [] arr2 = { 1.57f, 7.654f, 9.986f};
 
-
-        int [] arr3 = {1, 2, 3};
+        int[] arr3 = {1, 2, 3};
 
 
         // задание 2
@@ -668,9 +631,6 @@ public class Main {
         System.out.println("");
 
 
-
-
-
         //final
 
 
@@ -681,7 +641,7 @@ public class Main {
 
             }
         }
-            System.out.println(Arrays.toString(arr4));
+        System.out.println(Arrays.toString(arr4));
 
 
         //задание 1
@@ -698,10 +658,10 @@ public class Main {
         System.out.println("общая сумма - " + sum);
 
 
-        int [] inputArray1 = {10, 254, 43, 643, 4};
+        int[] inputArray1 = {10, 254, 43, 643, 4};
         int outputArray1 = -1;
-        for (int i = 0; i < inputArray1.length; i++){
-            if (inputArray1[i] > outputArray1){
+        for (int i = 0; i < inputArray1.length; i++) {
+            if (inputArray1[i] > outputArray1) {
                 outputArray1 = inputArray1[i];
             }
         }
@@ -709,10 +669,10 @@ public class Main {
         System.out.println("Большее число - " + outputArray1);
 
 
-        int [] inputArray1_1 = {10, 254, 43, 643, 4};
+        int[] inputArray1_1 = {10, 254, 43, 643, 4};
         int outputArray1_1 = 1000;
-        for (int i = 0; i < inputArray1.length; i++){
-            if (inputArray1_1[i] < outputArray1_1){
+        for (int i = 0; i < inputArray1.length; i++) {
+            if (inputArray1_1[i] < outputArray1_1) {
                 outputArray1_1 = inputArray1_1[i];
             }
         }
@@ -720,14 +680,12 @@ public class Main {
         System.out.println("среднее число - " + medium);
 
 
-
-
         // задание 2
         int[] inputArray2 = {56000, 43000, 30000, 20000, 45000};
         double[] outputArray2 = new double[inputArray2.length];
-        for (int i = 0; i < inputArray2.length; i++){
+        for (int i = 0; i < inputArray2.length; i++) {
             outputArray2[i] = inputArray2[i] * 0.13;
-            outputArray2[i] = inputArray2[i] -  outputArray2[i];
+            outputArray2[i] = inputArray2[i] - outputArray2[i];
 
         }
         System.out.println("зарплаты сотрудникам: " + Arrays.toString(inputArray2));
@@ -745,42 +703,41 @@ public class Main {
 
         }
 
-            for (int y : inputArray3) {
-                boolean outputArray3_1;
-                outputArray3_1 = y < 5000;
-                if (outputArray3_1){
-                    System.out.println("не выполнили показатели " + y);
-
-                }
-
-    }
-
-
-
-            // задание 4
-     int[] inputArray4 = {470000, -245000, 110000, -55322, 60000};
-            for (int i : inputArray4) {
-                boolean outputArray4;
-                outputArray4 = i > 0;
-                if (outputArray4) {
-                    System.out.println("просрочек нет");
-                } else {
-                    System.out.println("есть просрочка");
-                    break;
-                }
+        for (int y : inputArray3) {
+            boolean outputArray3_1;
+            outputArray3_1 = y < 5000;
+            if (outputArray3_1) {
+                System.out.println("не выполнили показатели " + y);
 
             }
+
+        }
+
+
+        // задание 4
+        int[] inputArray4 = {470000, -245000, 110000, -55322, 60000};
+        for (int i : inputArray4) {
+            boolean outputArray4;
+            outputArray4 = i > 0;
+            if (outputArray4) {
+                System.out.println("просрочек нет");
+            } else {
+                System.out.println("есть просрочка");
+                break;
+            }
+
+        }
         //задание 5
         int[] inputArray5 = {0, 50000, 56000, 89000, 66000};
-            for (int i : inputArray5)   {
-                boolean outputArray5;
-                outputArray5 = i > 1;
-                if (outputArray5){
-                    System.out.println("месяц рентабелен");
-                } else {
-                    System.out.println("месяц не рентабелен");
-                }
+        for (int i : inputArray5) {
+            boolean outputArray5;
+            outputArray5 = i > 1;
+            if (outputArray5) {
+                System.out.println("месяц рентабелен");
+            } else {
+                System.out.println("месяц не рентабелен");
             }
+        }
 
 
         //Задание 1
@@ -794,15 +751,18 @@ public class Main {
         String reportFullName = fullName.toUpperCase();
         System.out.println("Данные Ф. И. О. сотрудника для заполнения отчета — " + reportFullName);
 
-         //задание 3
+        //задание 3
         fullName = "Иванов Семён Семёнович";
         fullName = fullName.replace('ё', 'е');
         System.out.println("Данные Ф. И. О. сотрудника — " + fullName);
 
 
         checkYear(1323);
-        checkOS(2019, 0);
+        checkOS(2015, 0);
+        checkBank(20);
         checkBank(60);
+        checkBank(21);
+        checkBank(61);
 
 
     }
